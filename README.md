@@ -12,7 +12,7 @@ Replace `<your MongoDB connection string>` with the actual connection string for
 
 ## Hosting
 
-This application is currently hosted on EC2. You can access it at http://ec2-3-93-14-147.compute-1.amazonaws.com.
+This node application is currently hosted on EC2. You can access the APIs at http://ec2-3-93-14-147.compute-1.amazonaws.com.
 
 
 ## Testing
