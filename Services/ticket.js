@@ -19,7 +19,14 @@ module.exports = {
 
   getTicketUserDetail: async (req, res) => {
     const { id } = req.params;
-    const user = await Ticket.findOne({ _id: id }).select({"userDetails": 1}).exec();
+    const user = await Ticket.findOne({ _id: id })
+      .select({ userDetails: 1 })
+      .exec();
+
+    if (!user?.userDetails?.userName) {
+      return "Ticket not booked. No user details available";
+    }
+
     return user;
   },
 };
